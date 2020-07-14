@@ -17,5 +17,13 @@ class Building
     @units.map do |unit|
       unit.renter.name
     end
+    @units.compact
+  end
+
+  def average_rent
+    rent_total = @units.sum do |unit|
+      unit.monthly_rent.to_f
+    end
+    rent_total / @units.count
   end
 end

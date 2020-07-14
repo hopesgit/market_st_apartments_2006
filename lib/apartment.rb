@@ -25,7 +25,7 @@ class Apartment
     @details[:bedrooms]
   end
 
-  def add_renter(renter)
-    @renter = renter
+  def add_renter(renter_to_add)
+    @renter = renter_to_add
   end
 end
