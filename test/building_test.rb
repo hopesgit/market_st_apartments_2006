@@ -1,5 +1,6 @@
 require "./lib/renter"
 require "./lib/apartment"
+require "./lib/building"
 require "minitest/autorun"
 require "minitest/pride"
 
