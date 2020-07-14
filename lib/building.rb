@@ -14,10 +14,16 @@ class Building
   end
 
   def renters
-    @units.map do |unit|
-      unit.renter.name
+    renter_collection = []
+    @units.each do |unit|
+      if unit.renter == nil
+        break
+      else
+        renter_collection << unit.renter.name
+      end
     end
-    @units.compact
+    renter_collection.compact
+    renter_collection
   end
 
   def average_rent
