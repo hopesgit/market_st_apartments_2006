@@ -5,7 +5,7 @@ class Apartment
   attr_reader :details, :renter
 
   def initialize(details)
-    @details = {}
+    @details = details
     @renter = nil
   end
 
